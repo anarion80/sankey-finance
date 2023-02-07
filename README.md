@@ -47,12 +47,12 @@ The script is expecting the data to be in separate tabs (see [example input file
 | Operating Expenses | loss | #cc0001 |
 
 where:
-* `name` is just the name od the node
-* `type`
+* `name` is just the name of the node (Mandatory
+* `type` is the P&L profit or loss indicator (Mandatory)
   - `profit` - used to color positive values in the P&L green
   - `loss` - used to color negative values in the P&L red and in parentheses
   - anything else won't be used for now
-* `color` - optional
+* `color` is the node color (Optional)
 
 
 #### `links` - with the following columns
@@ -65,11 +65,10 @@ where:
 | Gross Profit | Operating Expenses | 2 | #cc0001 |
 
 where:
-* `name` is just the name od the node
-* `type`
-  - `profit` - used to color positive values in the P&L green
-  - `loss` - used to color negative values in the P&L red
-  - anything else and won't be used
+* `source` is the name of source node (Mandatory)
+* `target` is the name of target node (Mandatory
+* `value` is the value of the link (Mandatory
+* `color` is the color of the link (Mandatory
 
 
 #### `metadata` - with the following columns
@@ -80,9 +79,11 @@ where:
 
 only one row in addition to header row
 where:
-* `header` - desired chart title
-* `currency` - the desired currency symbol for values
-* `abbreviation` - the desired value abbreviation (i.e. `M` or `bln`)
+* `header` - desired chart title, will be empty if not provided
+* `currency` - the desired currency symbol for values, will be `€` if not provided
+* `abbreviation` - the desired value abbreviation (i.e. `M` or `bln`), will be `B` if not provided
+
+The tab presence is mandatory, but the values are optional.
 
 ### Command-line options
 
