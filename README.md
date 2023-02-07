@@ -67,8 +67,8 @@ where:
 where:
 * `source` is the name of source node (Mandatory)
 * `target` is the name of target node (Mandatory
-* `value` is the value of the link (Mandatory
-* `color` is the color of the link (Mandatory
+* `value` is the value of the link (Mandatory)
+* `color` is the color of the link (Mandatory)
 
 
 #### `metadata` - with the following columns
