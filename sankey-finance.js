@@ -151,6 +151,7 @@ mySankey(graph)
 
 const numLayers = findMaxValue(graph.nodes, 'layer')
 
+// links
 svg.append('g')
     .attr('fill', 'none')
     .attr('class', 'links')
@@ -166,6 +167,7 @@ svg.append('g')
     .append('title')
     .text(d => `${d.source.name} → ${d.target.name}\n${d.value.toLocaleString()}`)
 
+// nodes
 svg.append('g')
     .attr('class', 'nodes')
     .selectAll('rect')
@@ -177,6 +179,7 @@ svg.append('g')
     .attr('y', d => d.y0)
     .style('fill', d => d.color)
 
+// header
 svg.append('g')
     .append('text')
     .attr('x', d => width / 2)
@@ -189,6 +192,7 @@ svg.append('g')
     .attr('fill', d => 'blue')
     .text(graph.header)
 
+// node names and values
 svg.append('g')
     .attr('class', 'texts')
     .selectAll('text')
@@ -214,7 +218,6 @@ svg.append('g')
 
 if (fileExtension === 'png') {
     svg2img(body.html(), function (_error, buffer) {
-        // returns a Buffer
         fs.writeFileSync(`${filename}.png`, buffer)
     })
 } else if (fileExtension === undefined) {
