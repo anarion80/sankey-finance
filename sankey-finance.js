@@ -91,6 +91,11 @@ const nodePadding = argv.p || argv.nodepadding || 80
 const nodeWidth = argv.d || argv.nodewidth || 50
 const imageWidth = argv.w || argv.width || 1920
 const imageHeight = argv.h || argv.height || 1080
+const color = {
+    default: '#666666',
+    profit: '#2ba02d',
+    loss: '#cc0001'
+}
 
 // helper functions
 const formatValue = (value, currency, abbreviation) => {
@@ -135,8 +140,6 @@ const svg = body
     .attr('xmlns', 'http://www.w3.org/2000/svg')
     .attr('viewBox', `0 0 ${width} ${height}`)
     .style('background', '#fff')
-    // .style('width', width + margin.left + margin.right)
-    // .style('height', height + margin.top + margin.bottom)
 
 const mySankey = d3sankey.sankey()
     .nodeId(d => d.name)
@@ -161,7 +164,7 @@ svg.append('g')
     .enter().append('path')
     .attr('d', d3sankey.sankeyLinkHorizontal())
     .attr('stroke-width', d => Math.max(1, d.width))
-    .style('stroke', d => d.color)
+    .style('stroke', d => d.color || (d.target.type === 'profit' ? color.profit : d.target.type === 'loss' ? color.loss : color.default))
     .append('title')
     .text(d => d.index)
     .append('title')
@@ -177,7 +180,7 @@ svg.append('g')
     .attr('height', d => d.y1 - d.y0)
     .attr('x', d => d.x0)
     .attr('y', d => d.y0)
-    .style('fill', d => d.color)
+    .style('fill', d => d.color || (d.type === 'profit' ? color.profit : d.type === 'loss' ? color.loss : color.default))
 
 // header
 svg.append('g')
@@ -204,7 +207,7 @@ svg.append('g')
     .attr('font-size', nodePadding / 2.5)
     .attr('font-weight', 'bold')
     .attr('text-anchor', d => d.layer < numLayers ? 'middle' : 'start')
-    .attr('fill', d => d.color)
+    .attr('fill', d => d.color || (d.type === 'profit' ? color.profit : d.type === 'loss' ? color.loss : color.default))
     .text(d => d.name)
     .append('tspan')
     .attr('fill-opacity', 0.7)
@@ -214,8 +217,7 @@ svg.append('g')
     .attr('font-size', '0.75em')
     .text(d => d.type === 'loss' ? ` (${formatValue(d.value, graph.currency, graph.abbreviation)})` : ` ${formatValue(d.value, graph.currency, graph.abbreviation)}`)
 
-// write the chart
-
+// save the chart
 if (fileExtension === 'png') {
     svg2img(body.html(), function (_error, buffer) {
         fs.writeFileSync(`${filename}.png`, buffer)

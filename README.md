@@ -54,7 +54,7 @@ where:
   - `profit` - used to color positive values in the P&L green
   - `loss` - used to color negative values in the P&L red and in parentheses
   - anything else won't be used for now
-* `color` is the node color (Optional)
+* `color` is the node and node name color (Optional). If not provided, the color will depend on the `type`, or some default value
 
 
 #### `links` - with the following columns
@@ -70,7 +70,7 @@ where:
 * `source` is the name of source node (Mandatory)
 * `target` is the name of target node (Mandatory
 * `value` is the value of the link (Mandatory)
-* `color` is the color of the link (Mandatory)
+* `color` is the color of the link (Optional). If not provided, the color will depend on target node's `type`, or some default value
 
 
 #### `metadata` - with the following columns
