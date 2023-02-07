@@ -67,7 +67,7 @@ yargs(hideBin(process.argv))
         type: 'number',
         number: true,
         requiresArg: true,
-        default: 3050,
+        default: 1920,
         description: 'Image width'
     })
     .option('height', {
@@ -75,7 +75,7 @@ yargs(hideBin(process.argv))
         type: 'number',
         number: true,
         requiresArg: true,
-        default: 1610,
+        default: 1080,
         description: 'Image alignment'
     })
     .wrap(yargs.terminalWidth)
@@ -89,8 +89,8 @@ const nodesort = (argv.n || argv.nodesort) ? null : undefined
 const linksort = (argv.l || argv.linksort) ? null : undefined
 const nodePadding = argv.p || argv.nodepadding || 80
 const nodeWidth = argv.d || argv.nodewidth || 50
-const imageWidth = argv.w || argv.width || 3050
-const imageHeight = argv.h || argv.height || 1610
+const imageWidth = argv.w || argv.width || 1920
+const imageHeight = argv.h || argv.height || 1080
 
 // helper functions
 const formatValue = (value, currency, abbreviation) => {
@@ -130,13 +130,13 @@ const height = imageHeight - margin.top - margin.bottom
 const body = select(dom.window.document.querySelector('body'))
 const svg = body
     .append('svg')
-    .attr('width', width)
-    .attr('height', height)
+    .attr('width', imageWidth)
+    .attr('height', imageHeight)
     .attr('xmlns', 'http://www.w3.org/2000/svg')
     .attr('viewBox', `0 0 ${width} ${height}`)
     .style('background', '#fff')
-    .style('width', width + margin.left + margin.right)
-    .style('height', height + margin.top + margin.bottom)
+    // .style('width', width + margin.left + margin.right)
+    // .style('height', height + margin.top + margin.bottom)
 
 const mySankey = d3sankey.sankey()
     .nodeId(d => d.name)
