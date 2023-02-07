@@ -5,7 +5,7 @@
 [![Releases](https://img.shields.io/github/v/release/anarion80/sankey-finance?include_prereleases&color=success)](https://github.com/anarion80/sankey-finance/releases)
 [![License: MIT](https://img.shields.io/static/v1?label=license&message=MIT&color=success)](LICENSE)
 
-Sankey-finance is a command line utility (a wrapper around [d3-sankey](https://github.com/d3/d3-sankey)) to generate beautiful sankey chars - mostly for visualizing financial results.
+Sankey-finance is a command line utility (a wrapper around [d3-sankey](https://github.com/d3/d3-sankey)) to generate beautiful sankey charts - mostly for visualizing financial results.
 
 It is inspired by [App Economy Insights](https://twitter.com/EconomyApp) work. It is fully Open-Source and released under MIT licence.
 
