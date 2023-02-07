@@ -16,6 +16,8 @@ It is inspired by [App Economy Insights](https://twitter.com/EconomyApp) work. I
   - link sort method (cli)
   - node width (cli)
   - node padding (cli)
+  - image width (cli)
+  - image height (cli)  
   - node/link colors (input file)
   - chart title (input file)
   - value currency (input file)
