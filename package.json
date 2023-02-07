@@ -1,6 +1,6 @@
 {
   "name": "sankey-finance",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Financial Results Sankey Charts Generator",
   "repository": "anarion80/sankey-finance",
   "main": "sankey-finance.js",
