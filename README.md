@@ -34,6 +34,8 @@ If you would like to use this:
 * prepare input data in Excel spreadsheet file
 * run `node sankey-finance.js` with desired options (see below)
 
+You might need to experiment with node alignment and node/links sorting to create a chart that is best matching your input data.
+
 ### Input file format
 
 The script is expecting the data to be in separate tabs (see [example input file](input.xlsx)):
