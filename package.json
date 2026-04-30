@@ -4,6 +4,9 @@
   "description": "Financial Results Sankey Charts Generator",
   "repository": "anarion80/sankey-finance",
   "main": "sankey-finance.js",
+  "bin": {
+    "sankey-finance": "./sankey-finance.js"
+  },
   "type": "module",
   "keywords": [
     "cli",
