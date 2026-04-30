@@ -156,3 +156,7 @@ Sets the output image width.
 #### `-h, --height`
 
 Sets the output image height.
+
+#### `-A, --auto`
+
+Auto-fit node width and padding to image size (ignores -d and -p).
