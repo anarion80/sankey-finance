@@ -1,13 +1,10 @@
 {
   "name": "sankey-finance",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Financial Results Sankey Charts Generator",
   "repository": "anarion80/sankey-finance",
   "main": "sankey-finance.js",
   "type": "module",
-  "scripts": {
-    "lint": "eslint '**/*.js'"
-  },
   "keywords": [
     "cli",
     "charts",
@@ -22,17 +19,6 @@
     "read-excel-file": "^9.0.6",
     "svg2img": "^1.0.0-beta.2",
     "yargs": "^18.0.0"
-  },
-  "devDependencies": {
-    "eslint": "^10.2.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-n": "^17.24.0",
-    "eslint-plugin-prettier": "^5.5.5",
-    "eslint-plugin-promise": "^7.3.0",
-    "prettier": "^3.8.3"
   },
   "author": {
     "name": "anarion80",
