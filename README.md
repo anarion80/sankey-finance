@@ -8,7 +8,7 @@ Sankey-finance is a command line utility (a wrapper around [d3-sankey](https://g
 
 It is inspired by [App Economy Insights](https://twitter.com/EconomyApp) work. It is fully Open-Source and released under MIT licence.
 
-## :Sparkles: Features
+## :sparkles: Features
 
 - Ability to adjust
   - node alignment (cli)
@@ -27,7 +27,7 @@ It is inspired by [App Economy Insights](https://twitter.com/EconomyApp) work. I
 | ------------------------------------- | ------------------------------- |
 | ![Ericsson Results](img/Ericsson.png) | ![Nokia Results](img/Nokia.png) |
 
-## :Pencil2: Usage
+## :pencil2: Usage
 
 If you would like to use this:
 
