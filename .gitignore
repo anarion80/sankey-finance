@@ -108,6 +108,10 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
+# devenv
+.devenv
+.devenv.flake.nix
+
 # yarn v2
 .yarn/cache
 .yarn/unplugged
