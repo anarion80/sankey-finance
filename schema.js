@@ -1,53 +1,53 @@
 export const nodesSchema = {
     name: {
-        prop: 'name',
+        column: "name",
         type: String,
-        required: true
+        required: true,
     },
     type: {
-        prop: 'type',
+        column: "type",
         type: String,
-        required: true
+        required: true,
     },
     color: {
-        prop: 'color',
-        type: String
-    }
-}
+        column: "color",
+        type: String,
+    },
+};
 
 export const linksSchema = {
     source: {
-        prop: 'source',
+        column: "source",
         type: String,
-        required: true
+        required: true,
     },
     target: {
-        prop: 'target',
+        column: "target",
         type: String,
-        required: true
+        required: true,
     },
     value: {
-        prop: 'value',
+        column: "value",
         type: Number,
-        required: true
+        required: true,
     },
     color: {
-        prop: 'color',
-        type: String
-    }
-}
+        column: "color",
+        type: String,
+    },
+};
 
 export const metadataSchema = {
     header: {
-        prop: 'header',
-        type: String
+        column: "header",
+        type: String,
     },
     currency: {
-        prop: 'currency',
-        type: String
+        column: "currency",
+        type: String,
     },
     abbreviation: {
-        prop: 'abbreviation',
-        type: String
-    }
-}
+        column: "abbreviation",
+        type: String,
+    },
+};
